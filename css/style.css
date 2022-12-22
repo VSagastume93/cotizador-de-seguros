@@ -107,3 +107,30 @@ body .container{
   transform: scale(1.1);
   box-shadow: 1px 0px 10px 2px rgba(0, 0, 0, 0.75);
 }
+
+.year{
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.year label{
+  font-weight: 700;
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.year select{
+  width: 400px;
+  height: 30px;
+  text-align: center;
+  background-color: #73A9AD;
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.year select option{
+  font-weight: 700;
+  color: white;
+}
