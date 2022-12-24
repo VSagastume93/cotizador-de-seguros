@@ -151,7 +151,7 @@ body .container{
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 50px;
+  margin: 50px; 
 }
 
 .boton button{
@@ -176,7 +176,7 @@ footer{
 }
 
 footer .content{
-
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -194,4 +194,3 @@ footer .content h5{
   font-size: 10px;
 }
 
-/* prueba */
