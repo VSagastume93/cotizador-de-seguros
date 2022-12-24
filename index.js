@@ -3,12 +3,6 @@ let anioVehiculo;
 let tipoPlan;
 
 
-/**
- * 1. Pedir el tipo de vehiculo y realizar cálculo por tipo de carro
- * 2. Calcular el valor por el anio dependiendo del tipo de vehiculo
- */
-
-
 
 function realizarCotizacion() {
     const valorPorTipoVehiculo = calcularValorPorTipoVehiculo();
