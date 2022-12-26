@@ -1,103 +1,74 @@
-let tipoDeVehiculo;
-let anioVehiculo;
-let tipoPlan;
+const sedan = document.getElementById("sedan");
+const suv = document.getElementById("suv");
+const deportivo = document.getElementById("deportivo");
+const exotico = document.getElementById("exotico");
+const anio = document.getElementById("year");
+const planBasico = document.getElementById("radioBasico");
+const planCompleto = document.getElementById("radioCompleto");
+let botonCotizar = document.getElementById("cotizar")
 
+sedan.addEventListener("click", activarSeleccionSedan);
+suv.addEventListener("click", activarSeleccionSuv);
+deportivo.addEventListener("click", activarSeleccionDeportivo);
+exotico.addEventListener("click", activarSeleccionExotico);
+botonCotizar.addEventListener("click", realizarCotizacion);
 
-/**
- * 1. Pedir el tipo de vehiculo y realizar cálculo por tipo de carro
- * 2. Calcular el valor por el anio dependiendo del tipo de vehiculo
- */
-
-
-
-function realizarCotizacion() {
-    const valorPorTipoVehiculo = calcularValorPorTipoVehiculo();
-    const valorPorAnio = calcularPocentajePorAnio(valorPorTipoVehiculo);
-    const porcentajePorPlan = calcularPorcentajePlan();
-
-    mostrarCalculos(valorPorAnio, porcentajePorPlan);
+function realizarCotizacion(){
+    
 }
 
-function calcularValorPorTipoVehiculo() {
-    tipoDeVehiculo = prompt("Ingrese tipo de vehículo: (opciones disponibles: sedan, suv, deportivo, exotico)");
-    let valorPorTipoVehiculo = 0;
-    if (tipoDeVehiculo.toLowerCase() == "sedan") {
-        valorPorTipoVehiculo = 2500;
-    } else if (tipoDeVehiculo.toLowerCase() == "suv") {
-        valorPorTipoVehiculo = 3000;
-    } else if (tipoDeVehiculo.toLowerCase() == "deportivo") {
-        valorPorTipoVehiculo = 4000;
-    } else if (tipoDeVehiculo.toLowerCase() == "exotico") {
-        valorPorTipoVehiculo = 7000;
-    } else {
-        alert("Ingresa un tipo de vehiculo correcto");
-        calcularValorPorTipoVehiculo();
+function activarSeleccionSedan(){
+
+    if (sedan.classList.contains("car-active")){
+        sedan.classList.remove("car-active")
+    }else{
+        sedan.classList.add("car-active")
     }
 
-    console.log(valorPorTipoVehiculo)
-    return valorPorTipoVehiculo;
+    suv.classList.remove("car-active");
+    deportivo.classList.remove("car-active");
+    exotico.classList.remove("car-active")
+
 }
 
-function calcularPocentajePorAnio(valorPorTipoVehiculo) {
-    anioVehiculo = prompt("Ingrese año del vehículo: (opciones disponibles: vehículos del 2011 al 2021");
-    if (anioVehiculo == "2021") {
-        valorPorAnio = 1.55 * valorPorTipoVehiculo;
-    } else if (anioVehiculo == "2020") {
-        valorPorAnio = 1.50 * valorPorTipoVehiculo;
-    } else if (anioVehiculo == "2019") {
-        valorPorAnio = 1.45 * valorPorTipoVehiculo;
-    } else if (anioVehiculo == "2018") {
-        valorPorAnio = 1.40 * valorPorTipoVehiculo;
-    } else if (anioVehiculo == "2017") {
-        valorPorAnio = 1.35 * valorPorTipoVehiculo;
-    } else if (anioVehiculo == "2016") {
-        valorPorAnio = 1.30 * valorPorTipoVehiculo;
-    } else if (anioVehiculo == "2015") {
-        valorPorAnio = 1.25 * valorPorTipoVehiculo;
-    } else if (anioVehiculo == "2014") {
-        valorPorAnio = 1.20 * valorPorTipoVehiculo;
-    } else if (anioVehiculo == "2013") {
-        valorPorAnio = 1.15 * valorPorTipoVehiculo;
-    } else if (anioVehiculo == "2012") {
-        valorPorAnio = 1.10 * valorPorTipoVehiculo;
-    } else if (anioVehiculo == "2011") {
-        valorPorAnio = 1.05 * valorPorTipoVehiculo;
-    } else {
-        alert("Este año no está en la lista");
-        calcularPocentajePorAnio(valorPorTipoVehiculo);
+function activarSeleccionSuv(){
+
+    if (suv.classList.contains("car-active")){
+        suv.classList.remove("car-active")
+    }else{
+        suv.classList.add("car-active")
     }
 
-    console.log(valorPorAnio);
-    return valorPorAnio;
+    sedan.classList.remove("car-active");
+    deportivo.classList.remove("car-active");
+    exotico.classList.remove("car-active")
+
 }
 
-function calcularPorcentajePlan() {
-    tipoPlan = prompt("Ingrese tipo de plan deseado: (Opciones disponibles: basico y completo)")
-    let valorPorPlan = ""
+function activarSeleccionDeportivo(){
 
-    if (tipoPlan == "basico") {
-        valorPorPlan = 1.5;
-    } else if (tipoPlan == "completo") {
-        valorPorPlan = 2;
-    } else {
-        alert("Este tipo de plan no existe")
-        calcularPorcentajePlan();
+    if (deportivo.classList.contains("car-active")){
+        deportivo.classList.remove("car-active")
+    }else{
+        deportivo.classList.add("car-active")
     }
 
-    return valorPorPlan;
+    suv.classList.remove("car-active");
+    sedan.classList.remove("car-active");
+    exotico.classList.remove("car-active")
+
 }
 
+function activarSeleccionExotico(){
 
-function mostrarCalculos(valorPorAnio, porcentajePorPlan) {
-    const valorPrima = (valorPorAnio * porcentajePorPlan).toLocaleString('en-US', {maximumFractionDigits:2});
-    alert("Su prima de seguros anual asciende al monto de: Q. " + valorPrima + ". Vehículo tipo: " + tipoDeVehiculo + ", año del vehículo: " +anioVehiculo+ ", tipo de plan: " +tipoPlan+ ".")
+    if (exotico.classList.contains("car-active")){
+        exotico.classList.remove("car-active")
+    }else{
+        exotico.classList.add("car-active")
+    }
+
+    suv.classList.remove("car-active");
+    deportivo.classList.remove("car-active");
+    sedan.classList.remove("car-active")
+
 }
-
-
-
-realizarCotizacion();
-
-
-
-
-

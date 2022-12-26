@@ -104,8 +104,8 @@ body .container{
 }
 
 .type .cards div:hover{
-  transform: scale(1.1);
   box-shadow: 1px 0px 10px 2px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
 }
 
 .year{
@@ -129,6 +129,7 @@ body .container{
   color: white;
   text-shadow: black 0.1em 0.1em 0.2em;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .year select option{
@@ -145,6 +146,11 @@ body .container{
 .plan div{
   display: flex;
   gap: 10px;
+  cursor: pointer;
+}
+
+.plan div label{
+  cursor: pointer;
 }
 
 .boton {
@@ -163,6 +169,7 @@ body .container{
   transition: all 0.5s;
   color: white;
   text-shadow: black 0.1em 0.1em 0.2em;
+  cursor: pointer;
 }
 
 .boton button:hover{
@@ -194,3 +201,7 @@ footer .content h5{
   font-size: 10px;
 }
 
+.car-active {
+  transform: scale(1.1);
+  box-shadow: 1px 0px 10px 2px rgba(0, 0, 0, 0.75);
+}

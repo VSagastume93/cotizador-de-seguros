@@ -17,19 +17,19 @@
     <div class="type">
       <h2>Tipo de vehículo</h2>
       <div class="cards">
-        <div class="sedan">
+        <div class="sedan" id="sedan">
           <h3>Sedán</h3>
           <img src="./assets/sedan.png" width="150px" alt="">
         </div>
-        <div class="suv">
+        <div class="suv" id="suv">
           <h3>SUV</h3>
           <img src="./assets/SUV.png" width="150px" alt="">
         </div>
-        <div class="deportivo">
+        <div class="deportivo" id="deportivo">
           <h3>Deportivo</h3>
           <img src="./assets/deportivo.png" width="150px" alt="">
         </div>
-        <div class="exotico">
+        <div class="exotico" id="exotico">
           <h3>Exótico</h3>
           <img src="./assets/exotico.png" width="150px" alt="">
         </div>
@@ -57,15 +57,15 @@
     <div class="plan">
       <label>Plan: </label>
       <div class="basico">
-        <input type="radio" name="plan" value="basico" class="radio" id="radioBasico"> <label>Básico</label>
+        <input style="cursor: pointer;" type="radio" name="plan" value="basico" class="radio" id="radioBasico"> <label for="radioBasico">Básico</label>
       </div>
       <div class="completo">
-        <input type="radio" name="plan" value="completo" class="radio" id="radioCompleto"> <label>Completo</label>
+        <input style="cursor: pointer;" type="radio" name="plan" value="completo" class="radio" id="radioCompleto"> <label for="radioCompleto">Completo</label>
       </div>
     </div>
 <!-- boton -->
 <div class="boton">
-  <button>COTIZAR</button>
+  <button id="cotizar">COTIZAR</button>
 </div>
 <!-- footer -->
 <footer>
